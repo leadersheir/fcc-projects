@@ -1,0 +1,94 @@
+body {
+  font-family: "Libre Caslon Text", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 30px;
+  height: 50px;
+}
+
+#video_container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#nav-bar div {
+  height: auto;
+  width: auto;
+  margin: 2px 5px 2px 5px;
+  background: #dde3ed;
+  border-radius: 5px;
+  padding: 0.5px;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-bar {
+  display: flex;
+}
+
+#text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#maintext {
+  width: 560px;
+}
+
+@media (max-width: 400px) {
+  #maintext {
+    width: 80%;
+  }
+}
+
+#text h2 {
+  text-align: center;
+}
+
+#books {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+#books div {
+  width: 250px;
+}
+
+#bookdiv {
+  text-align: center;
+}
+
+#buy a {
+  text-decoration: none;
+  color: #0c2d63;
+}
+
+form {
+  text-align: center;
+}
+
+#email {
+  font-size: 24px;
+  border-radius: 7px;
+  margin: 5px;
+}
+
+#submit {
+  font-size: 15px;
+}

@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(360deg, #f0e9b9, #faf6d9);
+}
+
+p {
+  text-align: justify;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  max-heigh: 100%;
+}
+
+#tribute-info {
+  padding: 0vh 20vh 0vh 20vh;
+}

@@ -1,0 +1,88 @@
+label {
+  font-size: 20px;
+}
+
+span {
+  font-size: 20px;
+}
+
+#title {
+  color: white;
+}
+
+#description {
+  color: white;
+  font-size: 20px;
+}
+
+form {
+  background: #075737;
+  opacity: 0.9;
+  width: 40%;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+body {
+  background-image: url("https://images.wallpaperscraft.com/image/lawn_football_field_marking_119988_1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Questrial", sans-serif;
+}
+
+#title {
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+}
+
+/* #number {
+    margin-left: 15px;
+    width: 242px;
+  } */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 2px 10px 2px;
+}
+
+#radioButtons label {
+  position: relative;
+  left: 55px;
+}
+
+#checkboxes label {
+  position: relative;
+  left: 60px;
+}
+
+#Inputs input {
+  font-size: 20px;
+  margin: auto;
+  width: 100%;
+  padding: 2px;
+  margin: 5px 0px 5px 0px;
+}
+
+span {
+  color: white;
+  font-size: 25px;
+}
+
+label {
+  color: white;
+}
+
+button {
+  font-size: 17px;
+}

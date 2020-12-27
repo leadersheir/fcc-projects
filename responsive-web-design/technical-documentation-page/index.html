@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>FCC Project - Technical Documentation Page</title>
+</head>
+<nav id="navbar">
+    <header><strong>Brief Introduction to SQL</strong></header>
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#Manipulation">Manipulation</a>
+      <a class="nav-link" href="#Querying_Data">Querying Data</a>
+      <a class="nav-link" href="#Aggregate_Functions">Aggregate Functions</a>
+      <a class="nav-link" href="#Better_Resources">Better Resources</a>
+  </nav>
+<body>
+    <main id="main-doc">  
+        <section id="Introduction" class="main-section">
+          <header>
+            <strong>Introduction</strong>
+          </header>
+          <p>SQL stands for <em>Structured Query Language</em>. SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in handling structured data, i.e. data incorporating relations among entities and variables.</p>
+          <p>SQL offers two main advantages over older read–write APIs such as ISAM or VSAM. Firstly, it introduced the concept of accessing many records with one single command. Secondly, it eliminates the need to specify how to reach a record, e.g. with or without an index.
+      
+      Originally based upon relational algebra and tuple relational calculus, SQL consists of many types of statements, which may be informally classed as sublanguages, commonly: a data query language (DQL), a data definition language (DDL), a data control language (DCL), and a data manipulation language (DML). The scope of SQL includes data query, data manipulation (insert, update and delete), data definition (schema creation and modification), and data access control. Although SQL is essentially a declarative language (4GL), it also includes procedural elements.</p>
+          <a href="https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15">Learn More</a>
+        </section>
+        
+        <section id="Manipulation" class="main-section">
+          <header>
+            <strong>Manipulation</strong>
+          </header>
+          <p>A database is comprised of one or multiple tables. Tables are made up of rows and columns. The columns are usually keys and the rows are records. This section deals with creating and interacting with tables in a database.
+          <br><strong>Note: </strong>We will assume a connection to a database is already established and therefore will be ignoring the topic.</p>
+          <br><p>To insert or query data from a table in a database we have to create a table first. Here's how it's done.</p>
+          <p>The main query keywords:
+          <ul>
+            <li>SELECT</li>
+            <li>FROM</li>
+            <li>WHERE</li>
+            <li>* selector</li>
+            <li>The default logical operators</li>
+          </ul></p><br>
+          <pre><code>
+          CREATE TABLE table1 (
+           column1 INTEGER,
+           column2 TEXT,
+           column3 CHAR
+          );
+          
+      </code></pre>
+          <p>SQL code is written in uppercase by convention. The code will run the same if it's written in all lowercase. There are several datatypes in SQL, butt we won't be going over them.</p><br>
+          <p>This is how to insert data into the columns we created in the earlier code snippet.</p>
+          <pre><code>
+          INSERT INTO table1 VALUES (1, 'data', 'y');
+          
+      </code></pre>
+          <p>The values have to inserted in order of the columns. If the datatype of a value inserted into a column doesn't match the datatype of the column it will return an error. Make sure not to mess up datatypes.</p>
+          <p>Also, SQL queries have to end with a semi-colon. Don't forget the semi-colon at the end of the query!</p><br>
+          
+          <pre><code>
+          --This is a single line comment
+          /*This is a multiple
+          line comment*/
+          
+      </code></pre>
+        </section>
+        
+        <section id="Querying_Data" class="main-section">
+          <header>
+            <strong>Querying Data</strong>
+          </header>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, atque. Cupiditate nobis sit rerum magnam. Accusantium maxime perspiciatis ipsum qui fuga labore animi in voluptate! Consequatur sed sequi deserunt debitis?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, illo alias dignissimos, maiores magni sit id, voluptatibus deleniti ex facilis enim quasi nobis! Rerum impedit et consectetur tenetur iure eius. Pariatur impedit, hic aliquid quasi commodi voluptatibus eum aliquam numquam!</p>
+          <pre><code>
+          SELECT * FROM table; --Queries all elements from a table
+          
+          SELECT column FROM table; --Queries a specific column from a table
+          
+          SELECT column1,column2 FROM table; /*Queries multiple column from the table and orders
+          them accordingly*/
+          
+      </code></pre>
+        </section>
+        
+        <section id="Aggregate_Functions" class="main-section">
+          <header>
+            <strong>Aggregate Functions</strong>
+          </header>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laborum pariatur libero praesentium nihil ab nulla! Harum, sapiente veritatis fugit recusandae ratione reprehenderit voluptates repellat aut ipsa aspernatur placeat eius.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus rem laboriosam odit corrupti fugit necessitatibus nisi molestias, illum quo delectus? Explicabo minima nulla possimus iusto cumque, odit molestias sapiente. Eos perferendis quia odio ipsum tempore reprehenderit rem, est id explicabo.</p>
+          <pre><code>
+          SELECT * FROM table WHERE column='data';
+          
+          SELECT column FROM table WHERE 'data' IS NOT NULL;
+          
+          SELECT column AS selectedName FROM table;
+          
+      </code></pre>
+        </section>
+        
+        <section id="Better_Resources" class="main-section">
+          <header>
+            <strong>Better Resources</strong>
+          </header>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quam facere dolorem, animi sed in quasi nihil odit nemo blanditiis dicta at fuga repudiandae praesentium nostrum impedit explicabo sit. Ab?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia inventore mollitia expedita placeat perferendis cupiditate, officiis corrupti laboriosam alias atque? Iure unde vel commodi, placeat reprehenderit fugiat blanditiis error incidunt praesentium assumenda sunt reiciendis nobis. Praesentium perferendis nisi obcaecati eveniet.</p>
+          <p><a href="https://www.codecademy.com/learn/learn-sql">Codecademy</a> is a great place to learn the basics.</p>
+          <p>Check out this exercise by <a href="https://www.w3resource.com/sql-exercises/">W3SCHOOL.</a></p>
+        </section>
+      </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>
+
+

@@ -1,0 +1,35 @@
+main {
+  width: 85%;
+  float: right;
+}
+
+section {
+  margin: 10px;
+  padding: 5px;
+}
+
+pre {
+  background: #e6e8e8;
+  padding: 5px;
+}
+
+@media (min-width: 750px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 15%;
+  }
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  background: #e6e8e8;
+  margin: 1px;
+  text-align: center;
+}
+
+strong {
+  font-size: 20px;
+}

@@ -1,0 +1,116 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background: #4b0161;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+}
+
+.navlink {
+  margin-right: 1rem;
+}
+
+.navlink h1 {
+  color: white;
+}
+
+.navlink:hover {
+  background-color: #795db0;
+  padding-top: 2px;
+}
+
+#welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: gray;
+  height: 100vh;
+}
+
+#projects {
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    "title title"
+    "project1 project2"
+    "project3 project4"
+    "project5 project6";
+}
+
+#project-section-title {
+  grid-area: title;
+  font-size: 40px;
+}
+
+.project-tile {
+  height: 22rem;
+  width: 22rem;
+  background: magenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+}
+
+#project1 {
+  grid-area: project1;
+}
+
+#project2 {
+  grid-area: project2;
+}
+
+.contact {
+  background: cyan;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "profilelink1 profilelink2 profilelink3";
+  height: 30vh;
+  justify-content: center;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+#contact_header {
+  grid-area: header;
+  font-size: 40px;
+}
+
+#profile-link1 {
+  grid-area: profilelink1;
+}
+
+#profile-link2 {
+  grid-area: profilelink2;
+}
+
+#profile-link3 {
+  grid-area: profilelink3;
+}
+
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+}

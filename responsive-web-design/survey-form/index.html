@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>FCC Project - Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Thank you for helping us out with your feedback!</h1>
+    <p id="description">People of Soccer</p>
+
+    <form action="POST" id="survey-form">
+      <div id="Inputs">
+        <label for="name" id="name-label"><span>Name</span></label>
+        <input type="text" id="name" placeholder="Enter Your Name" required />
+        <br />
+        <label for="email" id="email-label"><span>Email</span></label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter Your Email"
+          required
+        />
+        <br />
+        <label for="number" id="number-label"><span>Age</span></label>
+        <input
+          type="number"
+          id="number"
+          min="10"
+          max="100"
+          placeholder="How Old Are You?"
+        />
+      </div>
+
+      <br />
+
+      <div id="dropdownMenu">
+        <select name="OptionsToSelect" id="dropdown">
+          <option disabled selected value>
+            How are you involved with Soccer?
+          </option>
+          <option value="opt1">Interested in the Game</option>
+          <option value="opt2">Die-hard Fan</option>
+          <option value="opt3">Semi Pro Player</option>
+          <option value="opt4">Professional Player</option>
+        </select>
+      </div>
+
+      <br />
+
+      <div id="radioButtons">
+        <span>What position do you play in?</span>
+        <br />
+        <label
+          ><input
+            type="radio"
+            name="radio"
+            value="radio1"
+          />Forward/Attacker</label
+        >
+        <br />
+        <label
+          ><input type="radio" name="radio" value="radio2" />Mid-fielder</label
+        >
+        <br />
+        <label
+          ><input type="radio" name="radio" value="radio3" />Defender</label
+        >
+        <br />
+        <label
+          ><input type="radio" name="radio" value="radio4" />Goalkeeper</label
+        >
+      </div>
+
+      <br />
+
+      <div id="checkboxes">
+        <span>Which leagues do you watch?</span>
+        <br />
+        <label><input type="checkbox" value="box1" />Champion's League</label>
+        <br />
+        <label><input type="checkbox" value="box2" />La Liga Santander</label>
+        <br />
+        <label><input type="checkbox" value="box3" />Serie A</label>
+        <br />
+        <label><input type="checkbox" value="box4" />Bundesliga</label>
+      </div>
+
+      <br />
+
+      <div id="commentstextarea">
+        <textarea
+          name="comments"
+          id="comments"
+          cols="30"
+          rows="10"
+          placeholder="Anything else you want to let us know?"
+        ></textarea>
+      </div>
+
+      <br />
+
+      <button id="submit">Submit</button>
+    </form>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
