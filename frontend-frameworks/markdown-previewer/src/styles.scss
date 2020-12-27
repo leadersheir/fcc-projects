@@ -1,0 +1,24 @@
+.App {
+  height: 100vh;
+}
+
+.text {
+  width: 45vw;
+  resize: none;
+  max-width: 400px;
+  min-height: 80vh;
+  padding: 1px 5px;
+  border: 1px solid gray;
+}
+
+.markout {
+  background: white;
+  width: 45vw;
+  max-width: 400px;
+  min-height: 80vh;
+  position: relative;
+  top: 1px;
+  padding: 1px 5px 1px 5px;
+  margin: 0;
+  border: 1px solid gray;
+}
