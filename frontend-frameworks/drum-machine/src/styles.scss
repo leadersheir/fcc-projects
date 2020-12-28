@@ -1,0 +1,43 @@
+@mixin flex-center($dir: row, $just: center, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  @include flex-center(column);
+
+  $pad-width: 100px;
+  $pad-height: 100px;
+
+  #display {
+    @include flex-center;
+    width: $pad-width*3 + 4;
+    height: 0.6*$pad-height;
+    border: 1px solid black;
+    background: gray;
+    color: white;
+  }
+
+  .drum-pad-container {
+    background: beige;
+    width: $pad-width*3 + 6;
+    @include flex-center;
+    flex-wrap: wrap;
+
+
+    .drum-pad {
+      @include flex-center;
+      height: $pad-width;
+      width: $pad-height;
+      background: cyan;
+      border: 1px solid black;
+    }
+
+  }
+}
