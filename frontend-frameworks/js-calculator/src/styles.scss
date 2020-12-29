@@ -1,0 +1,116 @@
+// mixins
+@mixin flex-center($dir: row, $just: center, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}
+
+// config
+$containerWidth: 200px;
+$btnWidth: $containerWidth/3;
+$containerHeight: $containerWidth*(4/3) + $btnWidth*(3/4);
+$miscContainerWidth: $btnWidth*(2/3);
+$displayWidth: $containerWidth + $miscContainerWidth;
+
+// styles
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  @include flex-center(column);
+
+  #displayContainer {
+    height: $btnWidth - 2px;
+    width: $displayWidth - 2px;
+    background: black;
+    @include flex-center(column);
+    border: 1px solid gray;
+
+    #overallDisp {
+      color: yellow;
+      @include flex-center(_, end);
+      width: 95%;
+      height: 40%;
+    }
+
+    #display {
+      color: white;
+      @include flex-center(_, end);
+      width: 95%;
+      height: 60%;
+      font-size: 22px;
+    }
+  }
+
+  #console {
+    @include flex-center;
+
+  }
+
+  #btnContainer {
+    @include flex-center(column);
+    background: cyan;
+    height: $containerHeight;
+    width: $containerWidth;
+
+    #numpad {
+      @include flex-center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      #zero {
+        width: 100%;
+      }
+
+      .numKey {
+        @include flex-center;
+        width: $btnWidth;
+        height: $btnWidth;
+        background: beige;
+
+        &:active {
+          background: darken(beige, 10);
+        }
+      }
+    }
+
+    #opContainer {
+      @include flex-center;
+
+      .opKey {
+        @include flex-center;
+        background: coral;
+        height: $btnWidth*(3/4);
+        width: $btnWidth*(3/4);
+
+        
+
+        &:active {
+          background: darken(coral, 10);
+        }
+      }
+    }
+  }
+
+  #miscContainer {
+    height:  $containerHeight;
+    width: $miscContainerWidth;
+
+    #decimal {
+      @include flex-center;
+      height: 15.7%;
+    }
+
+    .miscKey {
+      @include flex-center;
+      height: 42.15%;
+      background: cyan;
+
+      &:active {
+        background: darken(cyan, 10);
+      }
+    }
+  }
+}
